@@ -132,6 +132,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AdminInterno\AdminInterno.csproj">
+      <Project>{af382c47-f570-4fc1-b31e-54fabea5f8da}</Project>
+      <Name>AdminInterno</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BussinessLogicLayer\BussinessLogicLayer.csproj">
       <Project>{0338b402-1ea2-4d9a-8f11-af059791cb01}</Project>
       <Name>BussinessLogicLayer</Name>

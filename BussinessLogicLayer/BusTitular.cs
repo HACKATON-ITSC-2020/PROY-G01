@@ -1,5 +1,6 @@
 ﻿using DataAccessLayer;
 using Entities;
+using System.Data;
 
 namespace BussinessLogicLayer
 {
@@ -22,6 +23,11 @@ namespace BussinessLogicLayer
         public int SavePosibleTitular(Titular _titular)
         {
             return _dataTitular.SavePosibleTitular(_titular);
+        }
+
+        public DataSet listadoPosiblesTitulares(string cual)
+        {
+            return _dataTitular.listadoPosiblesTitulares(cual);
         }
     }
 }

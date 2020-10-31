@@ -1,5 +1,7 @@
 ﻿using Entities;
 using System;
+using System.ComponentModel.Design;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace DataAccessLayer
@@ -10,7 +12,7 @@ namespace DataAccessLayer
         {
             int resultado = -1;
 
-            string query = @"insert into Titular (Apellido,
+            string query = @"insert into PosibleTitular (Apellido,
                                                   Nombre,
                                                   CUIL,
                                                   DNI,
@@ -147,5 +149,33 @@ namespace DataAccessLayer
 
             return false;
         }
+
+        public DataSet listadoPosiblesTitulares(string cual)
+        {
+            string orden = string.Empty;
+            orden = "select * from PosibleTitular";
+            SqlCommand cmd = new SqlCommand(orden, conexion);
+            DataSet ds = new DataSet();
+            SqlDataAdapter da = new SqlDataAdapter();
+
+            try
+            {
+                Abrirconexion();
+                cmd.ExecuteNonQuery();
+                da.SelectCommand = cmd;
+                da.Fill(ds);
+            }
+            catch (Exception)
+            {
+                throw new Exception("Error al mostrar posibles titulares");
+            }
+            finally
+            {
+                Cerrarconexion();
+                cmd.Dispose();
+            }
+            return ds;
+        }
+
     }
 }

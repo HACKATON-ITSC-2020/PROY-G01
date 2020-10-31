@@ -1,7 +1,10 @@
-﻿using BussinessLogicLayer;
+﻿using AdminInterno;
+using BussinessLogicLayer;
 using Entities;
 using System;
+using System.Data.SqlClient;
 using System.Windows.Forms;
+
 
 namespace VirtualCash
 {
@@ -21,6 +24,10 @@ namespace VirtualCash
 
 
         #region Metodos
+
+
+       
+
 
         private void SendDataTitular()
         {
@@ -60,6 +67,8 @@ namespace VirtualCash
         {
             SendDataTitular();
             ClearTemplate();
+            Admin form2 = new Admin();
+            form2.Show();
         }
     }
 }
