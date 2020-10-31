@@ -39,10 +39,12 @@ namespace VirtualCash
         }
         private void BtnTarjetas_Click(object sender, EventArgs e)
         {
+            AbrirFormHijo(formHijo: new FormTarjetas());
         }
 
         private void BtnTienda_Click(object sender, EventArgs e)
         {
+
         }
 
         #endregion

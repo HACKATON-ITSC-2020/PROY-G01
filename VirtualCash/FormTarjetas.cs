@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace VirtualCash
 {
-    public partial class FormHome : Form
+    public partial class FormTarjetas : Form
     {
-        public FormHome()
+        public FormTarjetas()
         {
             InitializeComponent();
         }
