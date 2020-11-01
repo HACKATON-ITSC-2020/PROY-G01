@@ -15,5 +15,15 @@ namespace VirtualCash
             this.Hide();
             _registro.ShowDialog();
         }
+
+        private void lblID_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

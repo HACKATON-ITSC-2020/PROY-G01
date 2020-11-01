@@ -113,6 +113,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Registro.resx">
       <DependentUpon>Registro.cs</DependentUpon>
@@ -151,6 +152,27 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VCIMG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FONDODOLARES.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Digital-Money-820x420-820x420.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VCFOND.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VCFOND-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BOOTN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FOONDO.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
