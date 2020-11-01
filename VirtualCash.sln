@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BussinessLogicLayer", "Buss
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{C34B2D89-6020-4DA1-A283-2475CC07FD0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbVirtualCash", "DbVirtualCash\DbVirtualCash.csproj", "{D3546926-8D9F-4D10-916A-6A13CD5A761B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminInterno", "AdminInterno\AdminInterno.csproj", "{AF382C47-F570-4FC1-B31E-54FABEA5F8DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{C34B2D89-6020-4DA1-A283-2475CC07FD0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C34B2D89-6020-4DA1-A283-2475CC07FD0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C34B2D89-6020-4DA1-A283-2475CC07FD0D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D3546926-8D9F-4D10-916A-6A13CD5A761B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D3546926-8D9F-4D10-916A-6A13CD5A761B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D3546926-8D9F-4D10-916A-6A13CD5A761B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D3546926-8D9F-4D10-916A-6A13CD5A761B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF382C47-F570-4FC1-B31E-54FABEA5F8DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF382C47-F570-4FC1-B31E-54FABEA5F8DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF382C47-F570-4FC1-B31E-54FABEA5F8DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF382C47-F570-4FC1-B31E-54FABEA5F8DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
