@@ -250,9 +250,9 @@
             this.lblRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegistro.Location = new System.Drawing.Point(48, 11);
             this.lblRegistro.Name = "lblRegistro";
-            this.lblRegistro.Size = new System.Drawing.Size(227, 25);
+            this.lblRegistro.Size = new System.Drawing.Size(242, 25);
             this.lblRegistro.TabIndex = 16;
-            this.lblRegistro.Text = "CARGA TUS DATOS";
+            this.lblRegistro.Text = "GENERA TU CUENTA";
             this.lblRegistro.Click += new System.EventHandler(this.lblRegistro_Click);
             // 
             // Registro
