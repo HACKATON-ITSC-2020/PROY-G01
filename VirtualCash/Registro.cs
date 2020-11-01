@@ -70,5 +70,10 @@ namespace VirtualCash
             Admin form2 = new Admin();
             form2.Show();
         }
+
+        private void lblRegistro_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

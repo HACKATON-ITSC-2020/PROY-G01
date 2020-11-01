@@ -117,9 +117,9 @@
             this.lblID.ForeColor = System.Drawing.Color.Black;
             this.lblID.Location = new System.Drawing.Point(37, 5);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(110, 29);
+            this.lblID.Size = new System.Drawing.Size(240, 29);
             this.lblID.TabIndex = 16;
-            this.lblID.Text = "Usuario:";
+            this.lblID.Text = "Correo Electronico:";
             // 
             // LinkNuevoRegistro
             // 
