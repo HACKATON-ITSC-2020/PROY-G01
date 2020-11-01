@@ -28,24 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DtgMovimientos = new System.Windows.Forms.DataGridView();
             this.Id_Mov = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Transaccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.LblSaldoCC = new System.Windows.Forms.Label();
+            this.LblSaldoCH = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.LblCtaCte = new System.Windows.Forms.Label();
-            this.LblCH = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DtgMovimientos)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // DtgMovimientos
@@ -56,14 +54,14 @@
             this.DtgMovimientos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.DtgMovimientos.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.DtgMovimientos.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DtgMovimientos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DtgMovimientos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DtgMovimientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DtgMovimientos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id_Mov,
@@ -71,17 +69,17 @@
             this.Transaccion,
             this.Fecha});
             this.DtgMovimientos.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DtgMovimientos.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DtgMovimientos.DefaultCellStyle = dataGridViewCellStyle6;
             this.DtgMovimientos.EnableHeadersVisualStyles = false;
             this.DtgMovimientos.GridColor = System.Drawing.Color.White;
-            this.DtgMovimientos.Location = new System.Drawing.Point(12, 167);
+            this.DtgMovimientos.Location = new System.Drawing.Point(12, 132);
             this.DtgMovimientos.Name = "DtgMovimientos";
             this.DtgMovimientos.ReadOnly = true;
             this.DtgMovimientos.RowHeadersVisible = false;
@@ -90,7 +88,7 @@
             this.DtgMovimientos.RowTemplate.ReadOnly = true;
             this.DtgMovimientos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.DtgMovimientos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DtgMovimientos.Size = new System.Drawing.Size(560, 282);
+            this.DtgMovimientos.Size = new System.Drawing.Size(560, 317);
             this.DtgMovimientos.TabIndex = 34;
             this.DtgMovimientos.TabStop = false;
             this.DtgMovimientos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgMovimientos_CellContentClick);
@@ -98,8 +96,8 @@
             // Id_Mov
             // 
             this.Id_Mov.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Id_Mov.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Id_Mov.DefaultCellStyle = dataGridViewCellStyle2;
             this.Id_Mov.Frozen = true;
             this.Id_Mov.HeaderText = " Referencia";
             this.Id_Mov.Name = "Id_Mov";
@@ -110,10 +108,10 @@
             // Importe
             // 
             this.Importe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.Format = "N2";
-            dataGridViewCellStyle9.NullValue = null;
-            this.Importe.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Format = "N2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.Importe.DefaultCellStyle = dataGridViewCellStyle3;
             this.Importe.Frozen = true;
             this.Importe.HeaderText = " Importe";
             this.Importe.Name = "Importe";
@@ -124,9 +122,9 @@
             // Transaccion
             // 
             this.Transaccion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.NullValue = null;
-            this.Transaccion.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.NullValue = null;
+            this.Transaccion.DefaultCellStyle = dataGridViewCellStyle4;
             this.Transaccion.HeaderText = "Transacción";
             this.Transaccion.Name = "Transaccion";
             this.Transaccion.ReadOnly = true;
@@ -136,87 +134,74 @@
             // Fecha
             // 
             this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.Format = "d";
-            dataGridViewCellStyle11.NullValue = null;
-            this.Fecha.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Format = "d";
+            dataGridViewCellStyle5.NullValue = null;
+            this.Fecha.DefaultCellStyle = dataGridViewCellStyle5;
             this.Fecha.HeaderText = "Fecha";
             this.Fecha.Name = "Fecha";
             this.Fecha.ReadOnly = true;
             this.Fecha.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Fecha.Width = 140;
             // 
-            // panel1
+            // label1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.LblCtaCte);
-            this.panel1.Controls.Add(this.LblCH);
-            this.panel1.Location = new System.Drawing.Point(56, 41);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(465, 97);
-            this.panel1.TabIndex = 35;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(115, 20);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "Caja de Ahorro";
+            // 
+            // LblSaldoCC
+            // 
+            this.LblSaldoCC.AutoSize = true;
+            this.LblSaldoCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblSaldoCC.Location = new System.Drawing.Point(292, 56);
+            this.LblSaldoCC.Name = "LblSaldoCC";
+            this.LblSaldoCC.Size = new System.Drawing.Size(51, 55);
+            this.LblSaldoCC.TabIndex = 36;
+            this.LblSaldoCC.Text = "0";
+            // 
+            // LblSaldoCH
+            // 
+            this.LblSaldoCH.AutoSize = true;
+            this.LblSaldoCH.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblSaldoCH.Location = new System.Drawing.Point(12, 56);
+            this.LblSaldoCH.Name = "LblSaldoCH";
+            this.LblSaldoCH.Size = new System.Drawing.Size(51, 55);
+            this.LblSaldoCH.TabIndex = 37;
+            this.LblSaldoCH.Text = "0";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(286, 10);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(292, 13);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(133, 18);
-            this.label4.TabIndex = 41;
-            this.label4.Text = "Cuenta corriente";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(38, 10);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 18);
-            this.label3.TabIndex = 40;
-            this.label3.Text = "Caja de Ahorro";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // LblCtaCte
-            // 
-            this.LblCtaCte.AutoSize = true;
-            this.LblCtaCte.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCtaCte.Location = new System.Drawing.Point(327, 28);
-            this.LblCtaCte.Name = "LblCtaCte";
-            this.LblCtaCte.Size = new System.Drawing.Size(57, 61);
-            this.LblCtaCte.TabIndex = 39;
-            this.LblCtaCte.Text = "0";
-            this.LblCtaCte.Click += new System.EventHandler(this.LblCtaCte_Click);
-            // 
-            // LblCH
-            // 
-            this.LblCH.AutoSize = true;
-            this.LblCH.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCH.Location = new System.Drawing.Point(65, 28);
-            this.LblCH.Name = "LblCH";
-            this.LblCH.Size = new System.Drawing.Size(57, 61);
-            this.LblCH.TabIndex = 38;
-            this.LblCH.Text = "0";
+            this.label4.Size = new System.Drawing.Size(130, 20);
+            this.label4.TabIndex = 38;
+            this.label4.Text = "Cuenta Corriente";
             // 
             // FormMovimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::VirtualCash.Properties.Resources.FOONDO;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(584, 461);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.LblSaldoCH);
+            this.Controls.Add(this.LblSaldoCC);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.DtgMovimientos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMovimientos";
             this.Text = "FormMovimientos";
             this.Load += new System.EventHandler(this.FormMovimientos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DtgMovimientos)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -226,10 +211,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Importe;
         private System.Windows.Forms.DataGridViewTextBoxColumn Transaccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LblSaldoCC;
+        private System.Windows.Forms.Label LblSaldoCH;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label LblCtaCte;
-        private System.Windows.Forms.Label LblCH;
     }
 }

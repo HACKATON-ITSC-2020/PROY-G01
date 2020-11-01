@@ -31,20 +31,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.TabAdministrador = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.DtgMovimientos = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CUIL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Verificar = new System.Windows.Forms.DataGridViewLinkColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.TxtCorreo = new System.Windows.Forms.TextBox();
@@ -82,17 +77,6 @@
             this.TxtApellidoCoincidencia = new System.Windows.Forms.TextBox();
             this.BtnAceptar = new System.Windows.Forms.PictureBox();
             this.BtnRechazar = new System.Windows.Forms.PictureBox();
-            this.BtnGenerarCuenta = new System.Windows.Forms.Button();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -124,7 +108,24 @@
             this.textBox27 = new System.Windows.Forms.TextBox();
             this.BtnGenerarTarjetas = new System.Windows.Forms.Button();
             this.BtnAsociarCuenta = new System.Windows.Forms.Button();
-            this.tabControl1.SuspendLayout();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.textBox25 = new System.Windows.Forms.TextBox();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CUIL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Verificar = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.BtnGenerarCuenta = new System.Windows.Forms.Button();
+            this.TabAdministrador.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -136,19 +137,20 @@
             this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // TabAdministrador
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(666, 371);
-            this.tabControl1.TabIndex = 0;
+            this.TabAdministrador.Controls.Add(this.tabPage1);
+            this.TabAdministrador.Controls.Add(this.tabPage2);
+            this.TabAdministrador.Controls.Add(this.tabPage3);
+            this.TabAdministrador.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TabAdministrador.Location = new System.Drawing.Point(0, 0);
+            this.TabAdministrador.Name = "TabAdministrador";
+            this.TabAdministrador.SelectedIndex = 0;
+            this.TabAdministrador.Size = new System.Drawing.Size(666, 371);
+            this.TabAdministrador.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -175,22 +177,13 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.BtnGenerarCuenta);
+            this.tabPage3.Controls.Add(this.groupBox6);
             this.tabPage3.Controls.Add(this.BtnAsociarCuenta);
             this.tabPage3.Controls.Add(this.BtnGenerarTarjetas);
             this.tabPage3.Controls.Add(this.groupBox5);
             this.tabPage3.Controls.Add(this.groupBox4);
             this.tabPage3.Controls.Add(this.groupBox3);
-            this.tabPage3.Controls.Add(this.label17);
-            this.tabPage3.Controls.Add(this.textBox10);
-            this.tabPage3.Controls.Add(this.BtnGenerarCuenta);
-            this.tabPage3.Controls.Add(this.label29);
-            this.tabPage3.Controls.Add(this.label30);
-            this.tabPage3.Controls.Add(this.label31);
-            this.tabPage3.Controls.Add(this.label32);
-            this.tabPage3.Controls.Add(this.textBox22);
-            this.tabPage3.Controls.Add(this.textBox23);
-            this.tabPage3.Controls.Add(this.textBox24);
-            this.tabPage3.Controls.Add(this.textBox25);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -244,64 +237,9 @@
             this.DtgMovimientos.RowTemplate.ReadOnly = true;
             this.DtgMovimientos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.DtgMovimientos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DtgMovimientos.Size = new System.Drawing.Size(582, 325);
+            this.DtgMovimientos.Size = new System.Drawing.Size(622, 325);
             this.DtgMovimientos.TabIndex = 36;
             this.DtgMovimientos.TabStop = false;
-            // 
-            // Id
-            // 
-            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Format = "d";
-            dataGridViewCellStyle3.NullValue = null;
-            this.Id.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Id.HeaderText = "Identificador";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // CUIL
-            // 
-            this.CUIL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.NullValue = null;
-            this.CUIL.DefaultCellStyle = dataGridViewCellStyle4;
-            this.CUIL.HeaderText = "CUIL";
-            this.CUIL.Name = "CUIL";
-            this.CUIL.ReadOnly = true;
-            this.CUIL.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.CUIL.Width = 80;
-            // 
-            // Apellido
-            // 
-            this.Apellido.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.Format = "N2";
-            dataGridViewCellStyle5.NullValue = null;
-            this.Apellido.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Apellido.HeaderText = "Apellido";
-            this.Apellido.Name = "Apellido";
-            this.Apellido.ReadOnly = true;
-            this.Apellido.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Apellido.Width = 150;
-            // 
-            // Nombre
-            // 
-            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Nombre.Width = 150;
-            // 
-            // Verificar
-            // 
-            this.Verificar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Verificar.HeaderText = "Verificar";
-            this.Verificar.Name = "Verificar";
-            this.Verificar.ReadOnly = true;
-            this.Verificar.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Verificar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // groupBox1
             // 
@@ -340,6 +278,7 @@
             // 
             // TxtCorreo
             // 
+            this.TxtCorreo.Enabled = false;
             this.TxtCorreo.Location = new System.Drawing.Point(117, 190);
             this.TxtCorreo.Name = "TxtCorreo";
             this.TxtCorreo.Size = new System.Drawing.Size(189, 20);
@@ -410,6 +349,7 @@
             // 
             // TxtAlternativo
             // 
+            this.TxtAlternativo.Enabled = false;
             this.TxtAlternativo.Location = new System.Drawing.Point(117, 162);
             this.TxtAlternativo.Name = "TxtAlternativo";
             this.TxtAlternativo.Size = new System.Drawing.Size(189, 20);
@@ -417,6 +357,7 @@
             // 
             // TxtContacto
             // 
+            this.TxtContacto.Enabled = false;
             this.TxtContacto.Location = new System.Drawing.Point(117, 134);
             this.TxtContacto.Name = "TxtContacto";
             this.TxtContacto.Size = new System.Drawing.Size(189, 20);
@@ -424,6 +365,7 @@
             // 
             // TxtDNI
             // 
+            this.TxtDNI.Enabled = false;
             this.TxtDNI.Location = new System.Drawing.Point(117, 106);
             this.TxtDNI.Name = "TxtDNI";
             this.TxtDNI.Size = new System.Drawing.Size(189, 20);
@@ -431,6 +373,7 @@
             // 
             // TxtCUIL
             // 
+            this.TxtCUIL.Enabled = false;
             this.TxtCUIL.Location = new System.Drawing.Point(117, 78);
             this.TxtCUIL.Name = "TxtCUIL";
             this.TxtCUIL.Size = new System.Drawing.Size(189, 20);
@@ -438,6 +381,7 @@
             // 
             // TxtNombre
             // 
+            this.TxtNombre.Enabled = false;
             this.TxtNombre.Location = new System.Drawing.Point(117, 50);
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(189, 20);
@@ -445,6 +389,7 @@
             // 
             // TxtApellido
             // 
+            this.TxtApellido.Enabled = false;
             this.TxtApellido.Location = new System.Drawing.Point(117, 22);
             this.TxtApellido.Name = "TxtApellido";
             this.TxtApellido.Size = new System.Drawing.Size(189, 20);
@@ -452,6 +397,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(117, 217);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(63, 20);
@@ -496,6 +442,7 @@
             // 
             // TxtAdicionalCoincidencia
             // 
+            this.TxtAdicionalCoincidencia.Enabled = false;
             this.TxtAdicionalCoincidencia.Location = new System.Drawing.Point(118, 217);
             this.TxtAdicionalCoincidencia.Name = "TxtAdicionalCoincidencia";
             this.TxtAdicionalCoincidencia.Size = new System.Drawing.Size(63, 20);
@@ -512,6 +459,7 @@
             // 
             // TxtCorreoCoincidencia
             // 
+            this.TxtCorreoCoincidencia.Enabled = false;
             this.TxtCorreoCoincidencia.Location = new System.Drawing.Point(118, 190);
             this.TxtCorreoCoincidencia.Name = "TxtCorreoCoincidencia";
             this.TxtCorreoCoincidencia.Size = new System.Drawing.Size(189, 20);
@@ -582,6 +530,7 @@
             // 
             // TxtAlternativoCoincidencia
             // 
+            this.TxtAlternativoCoincidencia.Enabled = false;
             this.TxtAlternativoCoincidencia.Location = new System.Drawing.Point(118, 162);
             this.TxtAlternativoCoincidencia.Name = "TxtAlternativoCoincidencia";
             this.TxtAlternativoCoincidencia.Size = new System.Drawing.Size(189, 20);
@@ -589,6 +538,7 @@
             // 
             // TxtContactoCoincidencia
             // 
+            this.TxtContactoCoincidencia.Enabled = false;
             this.TxtContactoCoincidencia.Location = new System.Drawing.Point(118, 134);
             this.TxtContactoCoincidencia.Name = "TxtContactoCoincidencia";
             this.TxtContactoCoincidencia.Size = new System.Drawing.Size(189, 20);
@@ -596,6 +546,7 @@
             // 
             // TxtDniCoincidencia
             // 
+            this.TxtDniCoincidencia.Enabled = false;
             this.TxtDniCoincidencia.Location = new System.Drawing.Point(118, 106);
             this.TxtDniCoincidencia.Name = "TxtDniCoincidencia";
             this.TxtDniCoincidencia.Size = new System.Drawing.Size(189, 20);
@@ -603,6 +554,7 @@
             // 
             // TxtCuilCoincidencia
             // 
+            this.TxtCuilCoincidencia.Enabled = false;
             this.TxtCuilCoincidencia.Location = new System.Drawing.Point(118, 78);
             this.TxtCuilCoincidencia.Name = "TxtCuilCoincidencia";
             this.TxtCuilCoincidencia.Size = new System.Drawing.Size(189, 20);
@@ -610,6 +562,7 @@
             // 
             // TxtNombreCoincidencia
             // 
+            this.TxtNombreCoincidencia.Enabled = false;
             this.TxtNombreCoincidencia.Location = new System.Drawing.Point(118, 50);
             this.TxtNombreCoincidencia.Name = "TxtNombreCoincidencia";
             this.TxtNombreCoincidencia.Size = new System.Drawing.Size(189, 20);
@@ -617,6 +570,7 @@
             // 
             // TxtApellidoCoincidencia
             // 
+            this.TxtApellidoCoincidencia.Enabled = false;
             this.TxtApellidoCoincidencia.Location = new System.Drawing.Point(118, 22);
             this.TxtApellidoCoincidencia.Name = "TxtApellidoCoincidencia";
             this.TxtApellidoCoincidencia.Size = new System.Drawing.Size(189, 20);
@@ -644,96 +598,6 @@
             this.BtnRechazar.TabStop = false;
             this.BtnRechazar.Visible = false;
             // 
-            // BtnGenerarCuenta
-            // 
-            this.BtnGenerarCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnGenerarCuenta.Location = new System.Drawing.Point(23, 292);
-            this.BtnGenerarCuenta.Name = "BtnGenerarCuenta";
-            this.BtnGenerarCuenta.Size = new System.Drawing.Size(151, 45);
-            this.BtnGenerarCuenta.TabIndex = 95;
-            this.BtnGenerarCuenta.Text = "Generar Cuenta";
-            this.BtnGenerarCuenta.UseVisualStyleBackColor = true;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(20, 130);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(94, 13);
-            this.label29.TabIndex = 103;
-            this.label29.Text = "Limite Descubierto";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(20, 104);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(29, 13);
-            this.label30.TabIndex = 102;
-            this.label30.Text = "Alias";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(20, 52);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(29, 13);
-            this.label31.TabIndex = 101;
-            this.label31.Text = "CVU";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(20, 26);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(56, 13);
-            this.label32.TabIndex = 100;
-            this.label32.Text = "Cuenta N°";
-            // 
-            // textBox22
-            // 
-            this.textBox22.Location = new System.Drawing.Point(132, 127);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(189, 20);
-            this.textBox22.TabIndex = 99;
-            // 
-            // textBox23
-            // 
-            this.textBox23.Location = new System.Drawing.Point(132, 101);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(189, 20);
-            this.textBox23.TabIndex = 98;
-            // 
-            // textBox24
-            // 
-            this.textBox24.Location = new System.Drawing.Point(132, 49);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(189, 20);
-            this.textBox24.TabIndex = 97;
-            // 
-            // textBox25
-            // 
-            this.textBox25.Location = new System.Drawing.Point(132, 23);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(189, 20);
-            this.textBox25.TabIndex = 96;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(20, 78);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(36, 13);
-            this.label17.TabIndex = 106;
-            this.label17.Text = "Titular";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(132, 75);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(189, 20);
-            this.textBox10.TabIndex = 105;
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label18);
@@ -744,7 +608,7 @@
             this.groupBox3.Controls.Add(this.label21);
             this.groupBox3.Location = new System.Drawing.Point(340, 21);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(310, 122);
+            this.groupBox3.Size = new System.Drawing.Size(310, 137);
             this.groupBox3.TabIndex = 107;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tarjeta Debito";
@@ -761,9 +625,9 @@
             this.groupBox5.Controls.Add(this.textBox15);
             this.groupBox5.Controls.Add(this.label22);
             this.groupBox5.Controls.Add(this.textBox16);
-            this.groupBox5.Location = new System.Drawing.Point(23, 164);
+            this.groupBox5.Location = new System.Drawing.Point(9, 164);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(298, 122);
+            this.groupBox5.Size = new System.Drawing.Size(312, 122);
             this.groupBox5.TabIndex = 108;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Visa";
@@ -771,7 +635,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(17, 74);
+            this.label18.Location = new System.Drawing.Point(27, 83);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(36, 13);
             this.label18.TabIndex = 117;
@@ -779,7 +643,8 @@
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(79, 71);
+            this.textBox11.Enabled = false;
+            this.textBox11.Location = new System.Drawing.Point(89, 80);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(189, 20);
             this.textBox11.TabIndex = 116;
@@ -787,7 +652,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(17, 48);
+            this.label20.Location = new System.Drawing.Point(27, 57);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(34, 13);
             this.label20.TabIndex = 114;
@@ -796,7 +661,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(17, 22);
+            this.label21.Location = new System.Drawing.Point(27, 31);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(19, 13);
             this.label21.TabIndex = 113;
@@ -804,14 +669,16 @@
             // 
             // textBox13
             // 
-            this.textBox13.Location = new System.Drawing.Point(79, 45);
+            this.textBox13.Enabled = false;
+            this.textBox13.Location = new System.Drawing.Point(89, 54);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(189, 20);
             this.textBox13.TabIndex = 111;
             // 
             // textBox14
             // 
-            this.textBox14.Location = new System.Drawing.Point(79, 19);
+            this.textBox14.Enabled = false;
+            this.textBox14.Location = new System.Drawing.Point(89, 28);
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(189, 20);
             this.textBox14.TabIndex = 110;
@@ -827,6 +694,7 @@
             // 
             // textBox12
             // 
+            this.textBox12.Enabled = false;
             this.textBox12.Location = new System.Drawing.Point(84, 19);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(189, 20);
@@ -834,6 +702,7 @@
             // 
             // textBox15
             // 
+            this.textBox15.Enabled = false;
             this.textBox15.Location = new System.Drawing.Point(96, 67);
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(55, 20);
@@ -841,6 +710,7 @@
             // 
             // textBox16
             // 
+            this.textBox16.Enabled = false;
             this.textBox16.Location = new System.Drawing.Point(84, 43);
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(189, 20);
@@ -894,6 +764,7 @@
             // 
             // textBox17
             // 
+            this.textBox17.Enabled = false;
             this.textBox17.Location = new System.Drawing.Point(218, 67);
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(55, 20);
@@ -910,6 +781,7 @@
             // 
             // textBox18
             // 
+            this.textBox18.Enabled = false;
             this.textBox18.Location = new System.Drawing.Point(140, 92);
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(133, 20);
@@ -917,6 +789,7 @@
             // 
             // textBox19
             // 
+            this.textBox19.Enabled = false;
             this.textBox19.Location = new System.Drawing.Point(145, 92);
             this.textBox19.Name = "textBox19";
             this.textBox19.Size = new System.Drawing.Size(133, 20);
@@ -942,6 +815,7 @@
             // 
             // textBox20
             // 
+            this.textBox20.Enabled = false;
             this.textBox20.Location = new System.Drawing.Point(223, 67);
             this.textBox20.Name = "textBox20";
             this.textBox20.Size = new System.Drawing.Size(55, 20);
@@ -958,6 +832,7 @@
             // 
             // textBox21
             // 
+            this.textBox21.Enabled = false;
             this.textBox21.Location = new System.Drawing.Point(89, 19);
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new System.Drawing.Size(189, 20);
@@ -974,6 +849,7 @@
             // 
             // textBox26
             // 
+            this.textBox26.Enabled = false;
             this.textBox26.Location = new System.Drawing.Point(101, 67);
             this.textBox26.Name = "textBox26";
             this.textBox26.Size = new System.Drawing.Size(55, 20);
@@ -990,6 +866,7 @@
             // 
             // textBox27
             // 
+            this.textBox27.Enabled = false;
             this.textBox27.Location = new System.Drawing.Point(89, 43);
             this.textBox27.Name = "textBox27";
             this.textBox27.Size = new System.Drawing.Size(189, 20);
@@ -998,7 +875,7 @@
             // BtnGenerarTarjetas
             // 
             this.BtnGenerarTarjetas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnGenerarTarjetas.Location = new System.Drawing.Point(180, 292);
+            this.BtnGenerarTarjetas.Location = new System.Drawing.Point(166, 292);
             this.BtnGenerarTarjetas.Name = "BtnGenerarTarjetas";
             this.BtnGenerarTarjetas.Size = new System.Drawing.Size(151, 45);
             this.BtnGenerarTarjetas.TabIndex = 109;
@@ -1012,22 +889,190 @@
             this.BtnAsociarCuenta.Name = "BtnAsociarCuenta";
             this.BtnAsociarCuenta.Size = new System.Drawing.Size(151, 45);
             this.BtnAsociarCuenta.TabIndex = 110;
-            this.BtnAsociarCuenta.Text = "Asociar Cuenta";
+            this.BtnAsociarCuenta.Text = "Finalizar";
             this.BtnAsociarCuenta.UseVisualStyleBackColor = true;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.label17);
+            this.groupBox6.Controls.Add(this.textBox10);
+            this.groupBox6.Controls.Add(this.label29);
+            this.groupBox6.Controls.Add(this.label30);
+            this.groupBox6.Controls.Add(this.label31);
+            this.groupBox6.Controls.Add(this.label32);
+            this.groupBox6.Controls.Add(this.textBox22);
+            this.groupBox6.Controls.Add(this.textBox23);
+            this.groupBox6.Controls.Add(this.textBox24);
+            this.groupBox6.Controls.Add(this.textBox25);
+            this.groupBox6.Location = new System.Drawing.Point(9, 6);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(312, 152);
+            this.groupBox6.TabIndex = 111;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Cuenta Virtual";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(6, 72);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(36, 13);
+            this.label17.TabIndex = 116;
+            this.label17.Text = "Titular";
+            // 
+            // textBox10
+            // 
+            this.textBox10.Enabled = false;
+            this.textBox10.Location = new System.Drawing.Point(118, 69);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(189, 20);
+            this.textBox10.TabIndex = 115;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(6, 124);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(94, 13);
+            this.label29.TabIndex = 114;
+            this.label29.Text = "Limite Descubierto";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(6, 98);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(29, 13);
+            this.label30.TabIndex = 113;
+            this.label30.Text = "Alias";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(6, 46);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(29, 13);
+            this.label31.TabIndex = 112;
+            this.label31.Text = "CVU";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(6, 20);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(56, 13);
+            this.label32.TabIndex = 111;
+            this.label32.Text = "Cuenta N°";
+            // 
+            // textBox22
+            // 
+            this.textBox22.Enabled = false;
+            this.textBox22.Location = new System.Drawing.Point(118, 121);
+            this.textBox22.Name = "textBox22";
+            this.textBox22.Size = new System.Drawing.Size(189, 20);
+            this.textBox22.TabIndex = 110;
+            // 
+            // textBox23
+            // 
+            this.textBox23.Enabled = false;
+            this.textBox23.Location = new System.Drawing.Point(118, 95);
+            this.textBox23.Name = "textBox23";
+            this.textBox23.Size = new System.Drawing.Size(189, 20);
+            this.textBox23.TabIndex = 109;
+            // 
+            // textBox24
+            // 
+            this.textBox24.Enabled = false;
+            this.textBox24.Location = new System.Drawing.Point(118, 43);
+            this.textBox24.Name = "textBox24";
+            this.textBox24.Size = new System.Drawing.Size(189, 20);
+            this.textBox24.TabIndex = 108;
+            // 
+            // textBox25
+            // 
+            this.textBox25.Enabled = false;
+            this.textBox25.Location = new System.Drawing.Point(118, 17);
+            this.textBox25.Name = "textBox25";
+            this.textBox25.Size = new System.Drawing.Size(189, 20);
+            this.textBox25.TabIndex = 107;
+            // 
+            // Id
+            // 
+            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = null;
+            this.Id.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Id.HeaderText = "Identificador";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // CUIL
+            // 
+            this.CUIL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.NullValue = null;
+            this.CUIL.DefaultCellStyle = dataGridViewCellStyle4;
+            this.CUIL.HeaderText = "CUIL";
+            this.CUIL.Name = "CUIL";
+            this.CUIL.ReadOnly = true;
+            this.CUIL.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.CUIL.Width = 120;
+            // 
+            // Apellido
+            // 
+            this.Apellido.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Format = "N2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.Apellido.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Apellido.HeaderText = "Apellido";
+            this.Apellido.Name = "Apellido";
+            this.Apellido.ReadOnly = true;
+            this.Apellido.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Apellido.Width = 150;
+            // 
+            // Nombre
+            // 
+            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Nombre.Width = 150;
+            // 
+            // Verificar
+            // 
+            this.Verificar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Verificar.HeaderText = "Verificar";
+            this.Verificar.Name = "Verificar";
+            this.Verificar.ReadOnly = true;
+            this.Verificar.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Verificar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // BtnGenerarCuenta
+            // 
+            this.BtnGenerarCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGenerarCuenta.Location = new System.Drawing.Point(9, 292);
+            this.BtnGenerarCuenta.Name = "BtnGenerarCuenta";
+            this.BtnGenerarCuenta.Size = new System.Drawing.Size(151, 45);
+            this.BtnGenerarCuenta.TabIndex = 112;
+            this.BtnGenerarCuenta.Text = "Generar Cuenta";
+            this.BtnGenerarCuenta.UseVisualStyleBackColor = true;
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(666, 371);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.TabAdministrador);
             this.Name = "Admin";
-            this.Text = "Admin";
-            this.tabControl1.ResumeLayout(false);
+            this.Text = "Administrador";
+            this.TabAdministrador.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DtgMovimientos)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -1041,22 +1086,19 @@
             this.groupBox5.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl TabAdministrador;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.DataGridView DtgMovimientos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CUIL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewLinkColumn Verificar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label8;
@@ -1094,17 +1136,6 @@
         private System.Windows.Forms.TextBox TxtNombreCoincidencia;
         private System.Windows.Forms.TextBox TxtApellidoCoincidencia;
         private System.Windows.Forms.PictureBox BtnAceptar;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Button BtnGenerarCuenta;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.TextBox textBox25;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label18;
@@ -1136,5 +1167,22 @@
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Button BtnAsociarCuenta;
         private System.Windows.Forms.Button BtnGenerarTarjetas;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.TextBox textBox23;
+        private System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.TextBox textBox25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CUIL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewLinkColumn Verificar;
+        private System.Windows.Forms.Button BtnGenerarCuenta;
     }
 }

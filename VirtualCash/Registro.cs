@@ -1,5 +1,4 @@
-﻿using AdminInterno;
-using BussinessLogicLayer;
+﻿using BussinessLogicLayer;
 using Entities;
 using System;
 using System.Data.SqlClient;

@@ -234,6 +234,8 @@
             this.Controls.Add(this.TxtCUIL);
             this.Controls.Add(this.TxtNombre);
             this.Controls.Add(this.TxtApellido);
+            this.MaximumSize = new System.Drawing.Size(377, 361);
+            this.MinimumSize = new System.Drawing.Size(377, 361);
             this.Name = "Registro";
             this.Text = "Registro";
             this.ResumeLayout(false);

@@ -33,34 +33,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.BtnTarjetaVisa = new System.Windows.Forms.Button();
-            this.BtnTarjetaAmex = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTarjetas));
             this.DtgMovimientos = new System.Windows.Forms.DataGridView();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Transaccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Visa = new System.Windows.Forms.PictureBox();
+            this.Amex = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DtgMovimientos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Visa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Amex)).BeginInit();
             this.SuspendLayout();
-            // 
-            // BtnTarjetaVisa
-            // 
-            this.BtnTarjetaVisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnTarjetaVisa.Location = new System.Drawing.Point(101, 31);
-            this.BtnTarjetaVisa.Name = "BtnTarjetaVisa";
-            this.BtnTarjetaVisa.Size = new System.Drawing.Size(150, 100);
-            this.BtnTarjetaVisa.TabIndex = 0;
-            this.BtnTarjetaVisa.Text = "Visa";
-            this.BtnTarjetaVisa.UseVisualStyleBackColor = true;
-            // 
-            // BtnTarjetaAmex
-            // 
-            this.BtnTarjetaAmex.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnTarjetaAmex.Location = new System.Drawing.Point(315, 31);
-            this.BtnTarjetaAmex.Name = "BtnTarjetaAmex";
-            this.BtnTarjetaAmex.Size = new System.Drawing.Size(150, 100);
-            this.BtnTarjetaAmex.TabIndex = 1;
-            this.BtnTarjetaAmex.Text = "American Express";
-            this.BtnTarjetaAmex.UseVisualStyleBackColor = true;
             // 
             // DtgMovimientos
             // 
@@ -94,7 +77,7 @@
             this.DtgMovimientos.DefaultCellStyle = dataGridViewCellStyle5;
             this.DtgMovimientos.EnableHeadersVisualStyles = false;
             this.DtgMovimientos.GridColor = System.Drawing.SystemColors.Control;
-            this.DtgMovimientos.Location = new System.Drawing.Point(12, 167);
+            this.DtgMovimientos.Location = new System.Drawing.Point(12, 181);
             this.DtgMovimientos.Name = "DtgMovimientos";
             this.DtgMovimientos.ReadOnly = true;
             this.DtgMovimientos.RowHeadersVisible = false;
@@ -103,7 +86,7 @@
             this.DtgMovimientos.RowTemplate.ReadOnly = true;
             this.DtgMovimientos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.DtgMovimientos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DtgMovimientos.Size = new System.Drawing.Size(364, 282);
+            this.DtgMovimientos.Size = new System.Drawing.Size(363, 268);
             this.DtgMovimientos.TabIndex = 35;
             this.DtgMovimientos.TabStop = false;
             // 
@@ -144,30 +127,50 @@
             this.Importe.ReadOnly = true;
             this.Importe.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
+            // Visa
+            // 
+            this.Visa.Image = ((System.Drawing.Image)(resources.GetObject("Visa.Image")));
+            this.Visa.Location = new System.Drawing.Point(47, 12);
+            this.Visa.Name = "Visa";
+            this.Visa.Size = new System.Drawing.Size(204, 129);
+            this.Visa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Visa.TabIndex = 36;
+            this.Visa.TabStop = false;
+            // 
+            // Amex
+            // 
+            this.Amex.Image = ((System.Drawing.Image)(resources.GetObject("Amex.Image")));
+            this.Amex.Location = new System.Drawing.Point(320, 12);
+            this.Amex.Name = "Amex";
+            this.Amex.Size = new System.Drawing.Size(215, 129);
+            this.Amex.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Amex.TabIndex = 37;
+            this.Amex.TabStop = false;
+            // 
             // FormTarjetas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::VirtualCash.Properties.Resources.FOONDO;
             this.ClientSize = new System.Drawing.Size(584, 461);
+            this.Controls.Add(this.Amex);
+            this.Controls.Add(this.Visa);
             this.Controls.Add(this.DtgMovimientos);
-            this.Controls.Add(this.BtnTarjetaAmex);
-            this.Controls.Add(this.BtnTarjetaVisa);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormTarjetas";
             this.Text = "FormTarjetas";
             ((System.ComponentModel.ISupportInitialize)(this.DtgMovimientos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Visa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Amex)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button BtnTarjetaVisa;
-        private System.Windows.Forms.Button BtnTarjetaAmex;
         private System.Windows.Forms.DataGridView DtgMovimientos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Transaccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Importe;
+        private System.Windows.Forms.PictureBox Visa;
+        private System.Windows.Forms.PictureBox Amex;
     }
 }
