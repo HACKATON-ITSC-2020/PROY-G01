@@ -34,27 +34,19 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.LblCH = new System.Windows.Forms.Label();
             this.DtgMovimientos = new System.Windows.Forms.DataGridView();
             this.Id_Mov = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Transaccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LblCtaCte = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.LblCtaCte = new System.Windows.Forms.Label();
+            this.LblCH = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DtgMovimientos)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // LblCH
-            // 
-            this.LblCH.AutoSize = true;
-            this.LblCH.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCH.Location = new System.Drawing.Point(88, 49);
-            this.LblCH.Name = "LblCH";
-            this.LblCH.Size = new System.Drawing.Size(57, 63);
-            this.LblCH.TabIndex = 0;
-            this.LblCH.Text = "0";
             // 
             // DtgMovimientos
             // 
@@ -62,13 +54,13 @@
             this.DtgMovimientos.AllowUserToDeleteRows = false;
             this.DtgMovimientos.AllowUserToResizeRows = false;
             this.DtgMovimientos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.DtgMovimientos.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.DtgMovimientos.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.DtgMovimientos.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DtgMovimientos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
@@ -88,7 +80,7 @@
             dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DtgMovimientos.DefaultCellStyle = dataGridViewCellStyle12;
             this.DtgMovimientos.EnableHeadersVisualStyles = false;
-            this.DtgMovimientos.GridColor = System.Drawing.SystemColors.Control;
+            this.DtgMovimientos.GridColor = System.Drawing.Color.White;
             this.DtgMovimientos.Location = new System.Drawing.Point(12, 167);
             this.DtgMovimientos.Name = "DtgMovimientos";
             this.DtgMovimientos.ReadOnly = true;
@@ -101,6 +93,7 @@
             this.DtgMovimientos.Size = new System.Drawing.Size(560, 282);
             this.DtgMovimientos.TabIndex = 34;
             this.DtgMovimientos.TabStop = false;
+            this.DtgMovimientos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgMovimientos_CellContentClick);
             // 
             // Id_Mov
             // 
@@ -153,64 +146,90 @@
             this.Fecha.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Fecha.Width = 140;
             // 
-            // LblCtaCte
+            // panel1
             // 
-            this.LblCtaCte.AutoSize = true;
-            this.LblCtaCte.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCtaCte.Location = new System.Drawing.Point(330, 49);
-            this.LblCtaCte.Name = "LblCtaCte";
-            this.LblCtaCte.Size = new System.Drawing.Size(57, 63);
-            this.LblCtaCte.TabIndex = 35;
-            this.LblCtaCte.Text = "0";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(96, 33);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 13);
-            this.label3.TabIndex = 36;
-            this.label3.Text = "Caja de Ahorro";
+            this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.LblCtaCte);
+            this.panel1.Controls.Add(this.LblCH);
+            this.panel1.Location = new System.Drawing.Point(56, 41);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(465, 97);
+            this.panel1.TabIndex = 35;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(338, 33);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(286, 10);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 13);
-            this.label4.TabIndex = 37;
+            this.label4.Size = new System.Drawing.Size(133, 18);
+            this.label4.TabIndex = 41;
             this.label4.Text = "Cuenta corriente";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(38, 10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(121, 18);
+            this.label3.TabIndex = 40;
+            this.label3.Text = "Caja de Ahorro";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // LblCtaCte
+            // 
+            this.LblCtaCte.AutoSize = true;
+            this.LblCtaCte.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCtaCte.Location = new System.Drawing.Point(327, 28);
+            this.LblCtaCte.Name = "LblCtaCte";
+            this.LblCtaCte.Size = new System.Drawing.Size(57, 61);
+            this.LblCtaCte.TabIndex = 39;
+            this.LblCtaCte.Text = "0";
+            this.LblCtaCte.Click += new System.EventHandler(this.LblCtaCte_Click);
+            // 
+            // LblCH
+            // 
+            this.LblCH.AutoSize = true;
+            this.LblCH.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCH.Location = new System.Drawing.Point(65, 28);
+            this.LblCH.Name = "LblCH";
+            this.LblCH.Size = new System.Drawing.Size(57, 61);
+            this.LblCH.TabIndex = 38;
+            this.LblCH.Text = "0";
             // 
             // FormMovimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::VirtualCash.Properties.Resources.FOONDO;
             this.ClientSize = new System.Drawing.Size(584, 461);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.LblCtaCte);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.DtgMovimientos);
-            this.Controls.Add(this.LblCH);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMovimientos";
             this.Text = "FormMovimientos";
             this.Load += new System.EventHandler(this.FormMovimientos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DtgMovimientos)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label LblCH;
         private System.Windows.Forms.DataGridView DtgMovimientos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_Mov;
         private System.Windows.Forms.DataGridViewTextBoxColumn Importe;
         private System.Windows.Forms.DataGridViewTextBoxColumn Transaccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
-        private System.Windows.Forms.Label LblCtaCte;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label LblCtaCte;
+        private System.Windows.Forms.Label LblCH;
     }
 }
