@@ -216,7 +216,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(361, 347);
+            this.ClientSize = new System.Drawing.Size(361, 345);
             this.Controls.Add(this.BtnConfirmar);
             this.Controls.Add(this.rbtnNO);
             this.Controls.Add(this.rbtnSI);

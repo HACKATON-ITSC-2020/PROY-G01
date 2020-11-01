@@ -20,10 +20,6 @@ namespace BussinessLogicLayer
             return _dataTitular.SaveTitular(_titular);
         }
 
-        public int SavePosibleTitular(Titular _titular)
-        {
-            return _dataTitular.SavePosibleTitular(_titular);
-        }
 
         public DataSet listadoPosiblesTitulares(string cual)
         {

@@ -39,8 +39,6 @@ namespace AdminInterno
             dGVAdmin.Columns[5].Width = 100;
             dGVAdmin.Columns[6].Width = 100;
             dGVAdmin.Columns[7].Width = 100;
-
-
         }
         
 
@@ -49,12 +47,11 @@ namespace AdminInterno
         {
                 //dGVAdmin.Rows.Clear();
                 DataSet ds = new DataSet();
-                ds = _busTitular.listadoPosiblesTitulares("Todos");
+                ds = _busTitular.listadoPosiblesTitulares("todos");
                 if (ds.Tables[0].Rows.Count > 0)
                 {
                     foreach (DataRow dr in ds.Tables[0].Rows)
                     {
-
                         dGVAdmin.Rows.Add(dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), 
                             dr[5].ToString(), dr[6].ToString(), dr[7].ToString(), dr[8].ToString());
                         //dr[0].ToString(), 

@@ -261,9 +261,9 @@
             // dGVAdmin
             // 
             this.dGVAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVAdmin.Location = new System.Drawing.Point(50, 64);
+            this.dGVAdmin.Location = new System.Drawing.Point(12, 159);
             this.dGVAdmin.Name = "dGVAdmin";
-            this.dGVAdmin.Size = new System.Drawing.Size(400, 408);
+            this.dGVAdmin.Size = new System.Drawing.Size(838, 408);
             this.dGVAdmin.TabIndex = 54;
             // 
             // button1
@@ -277,7 +277,7 @@
             // 
             // btnAdmActualizar
             // 
-            this.btnAdmActualizar.Location = new System.Drawing.Point(50, 495);
+            this.btnAdmActualizar.Location = new System.Drawing.Point(738, 130);
             this.btnAdmActualizar.Name = "btnAdmActualizar";
             this.btnAdmActualizar.Size = new System.Drawing.Size(112, 23);
             this.btnAdmActualizar.TabIndex = 79;

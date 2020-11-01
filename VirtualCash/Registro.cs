@@ -24,11 +24,6 @@ namespace VirtualCash
 
 
         #region Metodos
-
-
-       
-
-
         private void SendDataTitular()
         {
             _titular.Apellido = txtApellido.Text;
@@ -46,7 +41,7 @@ namespace VirtualCash
             {
                 _titular.Adicional = "No";
             }
-            _busTitular.SavePosibleTitular(_titular);
+            _busTitular.SaveTitular(_titular);
         }
 
         private void ClearTemplate()

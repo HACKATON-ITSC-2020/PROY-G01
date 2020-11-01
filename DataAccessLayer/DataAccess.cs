@@ -13,7 +13,7 @@ namespace DataAccessLayer
         public string CadenaDeConexion = @"Integrated Security=SSPI;
                                             Persist Security Info=False;
                                             Initial Catalog=DbVirtualCash;
-                                            Data Source=(localdb)\MSSQLLocalDB"
+                                            Data Source=DESKTOP-S279OM7\SQLEXPRESS"
         ;
         //Data Source=DESKTOP-S279OM7\SQLEXPRESS
         public DataAccess()

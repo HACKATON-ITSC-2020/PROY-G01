@@ -9,7 +9,6 @@ namespace DataAccessLayer
     {
         public DataSet UltimosMovimientos()
         {
-            //////////////
             string query = @"select * from Movimiento";
 
             SqlCommand cmd = new SqlCommand(query, conexion);            

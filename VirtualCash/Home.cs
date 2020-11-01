@@ -35,6 +35,8 @@ namespace VirtualCash
 
         private void BtnCuenta_Click(object sender, EventArgs e)
         {
+            //Si el titular tiene cuenta, abrir otros forms. Sino no.
+
             AbrirFormHijo(formHijo: new FormMovimientos());
         }
         private void BtnTarjetas_Click(object sender, EventArgs e)

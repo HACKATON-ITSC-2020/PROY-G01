@@ -29,18 +29,16 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.BtnTarjetaVisa = new System.Windows.Forms.Button();
             this.BtnTarjetaAmex = new System.Windows.Forms.Button();
             this.DtgMovimientos = new System.Windows.Forms.DataGridView();
-            this.Id_Mov = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Transaccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Transaccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DtgMovimientos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,19 +80,18 @@
             this.DtgMovimientos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DtgMovimientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DtgMovimientos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id_Mov,
-            this.Importe,
+            this.Fecha,
             this.Transaccion,
-            this.Fecha});
+            this.Importe});
             this.DtgMovimientos.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DtgMovimientos.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DtgMovimientos.DefaultCellStyle = dataGridViewCellStyle5;
             this.DtgMovimientos.EnableHeadersVisualStyles = false;
             this.DtgMovimientos.GridColor = System.Drawing.SystemColors.Control;
             this.DtgMovimientos.Location = new System.Drawing.Point(12, 167);
@@ -106,59 +103,46 @@
             this.DtgMovimientos.RowTemplate.ReadOnly = true;
             this.DtgMovimientos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.DtgMovimientos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DtgMovimientos.Size = new System.Drawing.Size(560, 282);
+            this.DtgMovimientos.Size = new System.Drawing.Size(364, 282);
             this.DtgMovimientos.TabIndex = 35;
             this.DtgMovimientos.TabStop = false;
             // 
-            // Id_Mov
+            // Fecha
             // 
-            this.Id_Mov.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Id_Mov.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Id_Mov.Frozen = true;
-            this.Id_Mov.HeaderText = " Referencia";
-            this.Id_Mov.Name = "Id_Mov";
-            this.Id_Mov.ReadOnly = true;
-            this.Id_Mov.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // Importe
-            // 
-            this.Importe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Format = "N2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.Importe.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Importe.Frozen = true;
-            this.Importe.HeaderText = " Importe";
-            this.Importe.Name = "Importe";
-            this.Importe.ReadOnly = true;
-            this.Importe.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Importe.Width = 140;
+            dataGridViewCellStyle2.Format = "d";
+            dataGridViewCellStyle2.NullValue = null;
+            this.Fecha.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            this.Fecha.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Fecha.Width = 120;
             // 
             // Transaccion
             // 
             this.Transaccion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.NullValue = null;
-            this.Transaccion.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Transaccion.HeaderText = "Transacción";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.NullValue = null;
+            this.Transaccion.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Transaccion.HeaderText = "Descripción";
             this.Transaccion.Name = "Transaccion";
             this.Transaccion.ReadOnly = true;
             this.Transaccion.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Transaccion.Width = 140;
             // 
-            // Fecha
+            // Importe
             // 
-            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.Format = "d";
-            dataGridViewCellStyle5.NullValue = null;
-            this.Fecha.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            this.Fecha.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Fecha.Width = 180;
+            this.Importe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Format = "N2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.Importe.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Importe.HeaderText = " Importe";
+            this.Importe.Name = "Importe";
+            this.Importe.ReadOnly = true;
+            this.Importe.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // FormTarjetas
             // 
@@ -181,9 +165,8 @@
         private System.Windows.Forms.Button BtnTarjetaVisa;
         private System.Windows.Forms.Button BtnTarjetaAmex;
         private System.Windows.Forms.DataGridView DtgMovimientos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id_Mov;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Importe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Transaccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Transaccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Importe;
     }
 }

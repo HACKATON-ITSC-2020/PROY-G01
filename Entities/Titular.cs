@@ -1,4 +1,6 @@
-﻿namespace Entities
+﻿using System.Net.Cache;
+
+namespace Entities
 {
     public class Titular
     {
@@ -11,5 +13,8 @@
         public string Contacto { get; set; }
         public string ContactoAlternativo { get; set; }
         public string Correo { get; set; }
+
+        public string Clave { get; set; }
+        public string Estado { get; set; }
     }
 }
