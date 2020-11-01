@@ -47,7 +47,7 @@
             this.pictureBox1.Image = global::VirtualCash.Properties.Resources.VCFOND_removebg_preview;
             this.pictureBox1.Location = new System.Drawing.Point(-13, -1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(363, 266);
+            this.pictureBox1.Size = new System.Drawing.Size(350, 266);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
