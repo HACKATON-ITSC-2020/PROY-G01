@@ -11,20 +11,24 @@ namespace VirtualCash
     {
         #region Instancias
 
-        private Titular _titular = new Titular();
-        private BusTitular _busTitular = new BusTitular();
+        Login login = new Login();
+        private Titular _titular;
+        private BusTitular _busTitular;
+        private MetodosCompartidos _metodosCompartidos;
 
         #endregion
 
         public Registro()
         {
             InitializeComponent();
+            _busTitular = new BusTitular();
+            _titular = new Titular();
+            _metodosCompartidos = new MetodosCompartidos();
+            login.Close();
         }
 
         #region variables
 
-        string contraseña = string.Empty;
-        int longitud;
 
         #endregion
 
@@ -46,33 +50,13 @@ namespace VirtualCash
             {
                 _titular.Adicional = "No";
             }
-            GenerarPassword();
-            _titular.Clave = contraseña;
-            _titular.Estado = "Pendiente";
+            _metodosCompartidos.GenerarPassword();
+            _titular.Clave = _metodosCompartidos.clave;
+            _titular.Estado = "P";
             _busTitular.SaveTitular(_titular);
         }
 
-        private void GenerarPassword()
-        {
-            string[] letras = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
-                                "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"};
-            Random EleccionAleatoria = new Random();
-
-            for (int i = 0; i < longitud; i++)
-            {
-                int LetraAleatoria = EleccionAleatoria.Next(0, 100);
-                int NumeroAleatorio = EleccionAleatoria.Next(0, 9);
-
-                if (LetraAleatoria < letras.Length)
-                {
-                    contraseña += letras[LetraAleatoria];
-                }
-                else
-                {
-                    contraseña += NumeroAleatorio.ToString();
-                }
-            }            
-        }
+        
 
         private void ClearTemplate()
         {
@@ -87,15 +71,20 @@ namespace VirtualCash
 
         #endregion
 
-
+        #region Eventos
         private void BtnConfirmar_Click(object sender, EventArgs e)
         {
             SendDataTitular();
             ClearTemplate();
-            Registro _registro = new Registro();
-            Login _login = new Login();
-            _registro.Close();
-            _login.Show();
+
+            DialogResult _dialogResult = MessageBox.Show("Datos Enviados! A la brevedad vas a recibir un correo con una clave para ingresar a tu cuenta.", "Datos completados", MessageBoxButtons.OK);
+            if (_dialogResult == DialogResult.OK)
+            {
+                Registro registro = new Registro();
+                registro.Close();
+            }
         }
+
+        #endregion
     }
 }

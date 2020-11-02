@@ -1,15 +1,27 @@
-﻿create table Titular(
+﻿create database DbVirtualCash
+
+
+use DbVirtualCash
+
+create table Titular(
 Id int primary key identity not null,
-Titular varchar(2) not null, -- Si es falso, entonces puede ser un adicional.
+Adicional varchar(2) not null,
 Apellido varchar(50) not null,
-Nombre varchar(50) not null, 
-CUIL int not null,
-DNI int not null,
-Contacto int not null, 
-ContactoAlternativo int null, -- Este contacto, puede no tenerlo.
-Correo varchar(50) not null
+Nombre varchar(50) not null,
+CUIL varchar(15) not null,
+DNI varchar(15) not null,
+Contacto varchar(15) not null,
+ContactoAlternativo varchar(15) null,
+Correo varchar(50) not null,
+Clave varchar(50) not null,
+Estado varchar(1) not null  --- P = Posible; A = Activo; B = Baja (dado de baja)
 )
 go
+
+select * from Titular
+
+select Correo, Clave from Titular where Correo = 'ads'
+
 
 -- Vamos a utilizar solo 1 tabla de Cuenta. 
 -- Acá vamos a tener 2 saldos. 1 de la cta cte y el otro de la Caja de Ahorro.
@@ -25,6 +37,8 @@ LimiteDescubierto decimal not null,
 CONSTRAINT fk_cuenta_titular FOREIGN KEY (TitularId) REFERENCES Titular (Id)
 )
 
+select SaldoCC, SaldoCH from Cuenta
+
 go
 -- Hay que insertar los tipos manualmente
 -- código de 3 letras para la identificación
@@ -38,6 +52,16 @@ Codigo varchar(3) not null,
 Suma varchar(2) not null, 
 Descripcion varchar(100) null
 )
+
+insert into TipoMovimiento values ('EXT', 'No', 'Extracciones' )
+insert into TipoMovimiento values ('DEP', 'Si', 'Depósitos' )
+insert into TipoMovimiento values ('TRN', 'No', 'Transferencias' )
+insert into TipoMovimiento values ('TDC', 'No', 'Tarjeta de crédito' )
+insert into TipoMovimiento values ('TDD', 'No', 'Tarjeta de Débito' )
+insert into TipoMovimiento values ('CMP', 'No', 'Transferencias' )
+insert into TipoMovimiento values ('SLD', 'Si', 'Sueldo mensual' )
+insert into TipoMovimiento values ('EXT', 'No', 'Extracciones' )
+
 go
 create table Tarjeta(
 Id int primary key identity not null, 
@@ -73,3 +97,5 @@ CONSTRAINT fk_Movimiento_TipoMovimiento FOREIGN KEY (TipoMovimientoId) REFERENCE
 CONSTRAINT fk_movimiento_tarjeta FOREIGN KEY (TarjetaId) REFERENCES Titular (Id),
 CONSTRAINT fk_Movimiento_Cuenta FOREIGN KEY (CuentaId) REFERENCES Cuenta (Id)
 )
+
+select * from Titular

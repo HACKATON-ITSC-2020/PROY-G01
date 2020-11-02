@@ -34,15 +34,21 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTarjetas));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.DtgMovimientos = new System.Windows.Forms.DataGridView();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Transaccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Visa = new System.Windows.Forms.PictureBox();
             this.Amex = new System.Windows.Forms.PictureBox();
+            this.ChartFlujoDeFinanciamientos = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.DtgMovimientos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Visa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Amex)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChartFlujoDeFinanciamientos)).BeginInit();
             this.SuspendLayout();
             // 
             // DtgMovimientos
@@ -130,9 +136,9 @@
             // Visa
             // 
             this.Visa.Image = ((System.Drawing.Image)(resources.GetObject("Visa.Image")));
-            this.Visa.Location = new System.Drawing.Point(47, 12);
+            this.Visa.Location = new System.Drawing.Point(12, 12);
             this.Visa.Name = "Visa";
-            this.Visa.Size = new System.Drawing.Size(204, 129);
+            this.Visa.Size = new System.Drawing.Size(67, 48);
             this.Visa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Visa.TabIndex = 36;
             this.Visa.TabStop = false;
@@ -140,18 +146,41 @@
             // Amex
             // 
             this.Amex.Image = ((System.Drawing.Image)(resources.GetObject("Amex.Image")));
-            this.Amex.Location = new System.Drawing.Point(320, 12);
+            this.Amex.Location = new System.Drawing.Point(12, 75);
             this.Amex.Name = "Amex";
-            this.Amex.Size = new System.Drawing.Size(215, 129);
+            this.Amex.Size = new System.Drawing.Size(67, 41);
             this.Amex.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Amex.TabIndex = 37;
             this.Amex.TabStop = false;
+            // 
+            // ChartFlujoDeFinanciamientos
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.ChartFlujoDeFinanciamientos.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.ChartFlujoDeFinanciamientos.Legends.Add(legend1);
+            this.ChartFlujoDeFinanciamientos.Location = new System.Drawing.Point(101, 10);
+            this.ChartFlujoDeFinanciamientos.Name = "ChartFlujoDeFinanciamientos";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Legend = "Legend1";
+            series1.Name = "Visa";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.Legend = "Legend1";
+            series2.Name = "American Express";
+            this.ChartFlujoDeFinanciamientos.Series.Add(series1);
+            this.ChartFlujoDeFinanciamientos.Series.Add(series2);
+            this.ChartFlujoDeFinanciamientos.Size = new System.Drawing.Size(434, 155);
+            this.ChartFlujoDeFinanciamientos.TabIndex = 38;
             // 
             // FormTarjetas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(584, 461);
+            this.Controls.Add(this.ChartFlujoDeFinanciamientos);
             this.Controls.Add(this.Amex);
             this.Controls.Add(this.Visa);
             this.Controls.Add(this.DtgMovimientos);
@@ -161,6 +190,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DtgMovimientos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Visa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Amex)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChartFlujoDeFinanciamientos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -172,5 +202,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Importe;
         private System.Windows.Forms.PictureBox Visa;
         private System.Windows.Forms.PictureBox Amex;
+        private System.Windows.Forms.DataVisualization.Charting.Chart ChartFlujoDeFinanciamientos;
     }
 }

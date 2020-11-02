@@ -156,10 +156,10 @@
             // BtnConfirmar
             // 
             this.BtnConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnConfirmar.Location = new System.Drawing.Point(160, 263);
+            this.BtnConfirmar.Location = new System.Drawing.Point(160, 258);
             this.BtnConfirmar.Name = "BtnConfirmar";
             this.BtnConfirmar.Size = new System.Drawing.Size(108, 47);
-            this.BtnConfirmar.TabIndex = 12;
+            this.BtnConfirmar.TabIndex = 9;
             this.BtnConfirmar.Text = "Guardar";
             this.BtnConfirmar.UseVisualStyleBackColor = true;
             this.BtnConfirmar.Click += new System.EventHandler(this.BtnConfirmar_Click);
@@ -170,7 +170,7 @@
             this.RbYes.Location = new System.Drawing.Point(160, 221);
             this.RbYes.Name = "RbYes";
             this.RbYes.Size = new System.Drawing.Size(34, 17);
-            this.RbYes.TabIndex = 13;
+            this.RbYes.TabIndex = 7;
             this.RbYes.TabStop = true;
             this.RbYes.Text = "Si";
             this.RbYes.UseVisualStyleBackColor = true;
@@ -181,7 +181,7 @@
             this.RbNo.Location = new System.Drawing.Point(219, 221);
             this.RbNo.Name = "RbNo";
             this.RbNo.Size = new System.Drawing.Size(39, 17);
-            this.RbNo.TabIndex = 14;
+            this.RbNo.TabIndex = 8;
             this.RbNo.TabStop = true;
             this.RbNo.Text = "No";
             this.RbNo.UseVisualStyleBackColor = true;
@@ -191,9 +191,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(12, 223);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 13);
+            this.label7.Size = new System.Drawing.Size(77, 13);
             this.label7.TabIndex = 15;
-            this.label7.Text = "¿Es titular?";
+            this.label7.Text = "¿Es Adicional?";
             // 
             // label8
             // 
@@ -209,7 +209,7 @@
             this.TxtCorreo.Location = new System.Drawing.Point(160, 193);
             this.TxtCorreo.Name = "TxtCorreo";
             this.TxtCorreo.Size = new System.Drawing.Size(189, 20);
-            this.TxtCorreo.TabIndex = 16;
+            this.TxtCorreo.TabIndex = 6;
             // 
             // Registro
             // 
@@ -237,6 +237,7 @@
             this.MaximumSize = new System.Drawing.Size(377, 361);
             this.MinimumSize = new System.Drawing.Size(377, 361);
             this.Name = "Registro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro";
             this.ResumeLayout(false);
             this.PerformLayout();

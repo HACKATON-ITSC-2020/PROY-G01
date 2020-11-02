@@ -9,6 +9,6 @@
         public int TitularId { get; set; }
         public decimal SaldoCC { get; set; }
         public decimal SaldoCH { get; set; }
-        public int LimiteDescubierto { get; set; }
+        public decimal LimiteDescubierto { get; set; }
     }
 }

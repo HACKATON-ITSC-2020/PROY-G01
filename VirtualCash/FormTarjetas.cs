@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace VirtualCash
 {
@@ -16,5 +17,19 @@ namespace VirtualCash
         {
             InitializeComponent();
         }
+
+
+        #region Metodos
+
+
+        private void ConfiguracionDelChart()
+        {
+            
+        }
+
+
+
+        #endregion
+
     }
 }

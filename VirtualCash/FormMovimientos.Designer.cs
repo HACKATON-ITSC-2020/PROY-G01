@@ -91,7 +91,6 @@
             this.DtgMovimientos.Size = new System.Drawing.Size(560, 317);
             this.DtgMovimientos.TabIndex = 34;
             this.DtgMovimientos.TabStop = false;
-            this.DtgMovimientos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgMovimientos_CellContentClick);
             // 
             // Id_Mov
             // 

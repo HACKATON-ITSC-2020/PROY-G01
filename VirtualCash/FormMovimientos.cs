@@ -14,20 +14,34 @@ namespace VirtualCash
 {
     public partial class FormMovimientos : Form
     {
-        private Movimiento _movimiento;        
-        private CommonClass _commonClass;
 
+        #region Instancias
+
+        private Movimiento _movimiento;
+        private CommonClass _commonClass;
+        private MetodosCompartidos _metodosCompartidos;
+
+        #endregion
+
+
+        #region Load
         public FormMovimientos()
         {
             InitializeComponent();
             _movimiento = new Movimiento();
             _commonClass = new CommonClass();
+            _metodosCompartidos = new MetodosCompartidos();
         }
 
         private void FormMovimientos_Load(object sender, EventArgs e)
         {
             CargarMovimientos();
+            _metodosCompartidos.TraerSaldos();
+            MostrarSaldos();
         }
+
+        #endregion
+
 
         #region Metodos
 
@@ -44,26 +58,18 @@ namespace VirtualCash
             }
         }
 
+        private void MostrarSaldos()
+        {
+            LblSaldoCC.Text = _metodosCompartidos.SaldoCC.ToString("G29");
+            LblSaldoCH.Text = _metodosCompartidos.SaldoCH.ToString("G29");
+        }
+
+
         #endregion
 
-        private void label4_Click(object sender, EventArgs e)
-        {
+        #region Eventos
 
-        }
+        #endregion
 
-        private void LblCtaCte_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DtgMovimientos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

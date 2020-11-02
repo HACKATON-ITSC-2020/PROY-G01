@@ -19,14 +19,20 @@ namespace DataAccessLayer
                                                   Contacto,
                                                   ContactoAlternativo,
                                                   Correo,
-                                                  Adicional) values (@Apellido,
+                                                  Adicional,
+                                                  Clave,
+                                                  Estado)
+
+                                          values (@Apellido,
                                                   @Nombre,
                                                   @CUIL,
                                                   @DNI,
                                                   @Contacto,
                                                   @ContactoAlternativo,
                                                   @Correo,
-                                                  @Adicional)"
+                                                  @Adicional,
+                                                  @Clave,
+                                                  @Estado)"
             ;
 
             SqlParameter apellido = new SqlParameter("@Apellido", _titular.Apellido);
@@ -37,6 +43,8 @@ namespace DataAccessLayer
             SqlParameter contactoAlternativo = new SqlParameter("@ContactoAlternativo", _titular.ContactoAlternativo);
             SqlParameter correo = new SqlParameter("@Correo", _titular.Correo);
             SqlParameter adicional = new SqlParameter("@Adicional", _titular.Adicional);
+            SqlParameter clave = new SqlParameter("@Clave", _titular.Clave);
+            SqlParameter estado = new SqlParameter("@Estado", _titular.Estado);
 
             SqlCommand cmd = new SqlCommand(query, conexion);
 
@@ -48,6 +56,8 @@ namespace DataAccessLayer
             cmd.Parameters.Add(contactoAlternativo);
             cmd.Parameters.Add(correo);
             cmd.Parameters.Add(adicional);
+            cmd.Parameters.Add(clave);
+            cmd.Parameters.Add(estado);
 
             try
             {
@@ -67,17 +77,30 @@ namespace DataAccessLayer
             return resultado;
         }
 
-        public bool ConsultarTitular(Titular _titular)
+        public Titular ConsultarTitular(string correo, string clave)
         {
-            string query = @""
-                            
-            ;
+            Titular _titular = new Titular();
+            string query = @"select Correo, Clave from Titular where Correo = '" + correo + "'";
 
             SqlCommand cmd = new SqlCommand(query, conexion);
 
             try
             {
-                Abrirconexion();                               
+                Abrirconexion();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    _titular.Correo = reader["Correo"].ToString();
+                    _titular.Clave = reader["Clave"].ToString();
+                }
+                else
+                {
+                    _titular.Correo = "No";
+                    _titular.Clave = "No";
+                }
+                reader.Close();
+                cmd.ExecuteNonQuery();
             }
             catch (Exception)
             {
@@ -86,16 +109,17 @@ namespace DataAccessLayer
             finally
             {
                 Cerrarconexion();
+                cmd.Dispose();
             }
-
-            return false;
+            return _titular;
         }
 
-        public DataSet listadoPosiblesTitulares(string cual)
+        public DataSet ListadoTitularesPendientes()
         {
-            string orden = string.Empty;
-            orden = "select * from PosibleTitular";
-            SqlCommand cmd = new SqlCommand(orden, conexion);
+            string query = @"select Id, CUIL, Apellido, Nombre from Titular where Estado = 'P'
+                           Order by Id, CUIL, Apellido, Nombre";
+
+            SqlCommand cmd = new SqlCommand(query, conexion);
             DataSet ds = new DataSet();
             SqlDataAdapter da = new SqlDataAdapter();
 
@@ -106,9 +130,9 @@ namespace DataAccessLayer
                 da.SelectCommand = cmd;
                 da.Fill(ds);
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw new Exception("Error al mostrar posibles titulares");
+                throw new Exception("Error al traer titulares", e);
             }
             finally
             {
@@ -118,5 +142,106 @@ namespace DataAccessLayer
             return ds;
         }
 
+        public int RestablecerClave(Titular _titular)
+        {
+            int resultado = -1;
+
+            string query = @"Update Titular Set Clave = @Clave
+                            where Correo = @Correo"
+            ;
+
+            SqlParameter clave = new SqlParameter("@Clave", _titular.Clave);
+            SqlParameter correo = new SqlParameter("@Correo", _titular.Correo);
+
+            SqlCommand cmd = new SqlCommand(query, conexion);
+
+            cmd.Parameters.Add(clave);
+            cmd.Parameters.Add(correo);
+
+            try
+            {
+                Abrirconexion();
+
+                resultado = cmd.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                Cerrarconexion();
+                cmd.Dispose();
+            }
+
+            return resultado;
+        }
+
+        public Titular ConsultarTitularPendiente(Titular _titular)
+        {
+            string query = @"select * from Titular where Id = '"+_titular.Id+"'";
+
+            SqlCommand cmd = new SqlCommand(query, conexion);
+
+            try
+            {
+                Abrirconexion();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    _titular.Id = int.Parse(reader["Id"].ToString());
+                    _titular.Apellido = reader["Apellido"].ToString();
+                    _titular.Nombre = reader["Nombre"].ToString();
+                    _titular.CUIL = reader["CUIL"].ToString();
+                    _titular.DNI = reader["DNI"].ToString();
+                    _titular.Contacto = reader["Contacto"].ToString();
+                    _titular.ContactoAlternativo = reader["ContactoAlternativo"].ToString();
+                    _titular.Correo = reader["Correo"].ToString();
+                    _titular.Clave = reader["Clave"].ToString();
+                }
+                reader.Close();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                Cerrarconexion();
+                cmd.Dispose();
+            }
+            return _titular;
+        }
+
+        public Titular BuscarCoincidencias(int PosibleTitularId, Titular _titular)
+        {
+            string query = "select count(Id) as Idcounter from Titular where Id = '" + PosibleTitularId + "'";
+            SqlCommand cmd = new SqlCommand(query, conexion);
+
+            try
+            {
+                Abrirconexion();
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    _titular.Id = int.Parse(reader["IdCounter"].ToString());
+                }
+                reader.Close();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                Cerrarconexion();
+                cmd.Dispose();
+            }
+
+            return _titular;
+        }
     }
 }
